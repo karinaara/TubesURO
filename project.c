@@ -5,6 +5,11 @@ void findPos(char *dir)
     int up = 0, down = 0;
     int left = 0, right = 0;
     int i;
+    int x;
+    int y;
+    time_t t;
+    int a;
+    int b;
 
     for (i = 0; dir[i] != '\0' ; i++) {
 
@@ -27,10 +32,26 @@ void findPos(char *dir)
     }
 
     //Final position of robot
+    x = right - left;
+    y = up - down;
     printf("Final Position of the Robot: (");
-    printf("%d", (right - left));
-    printf(",%d", (up - down));
+    printf("%d", (x));
+    printf(",%d", (y));
     printf(")");
+    
+    /* Intializes random number generator */
+    srand((unsigned) time(&t));
+
+    /* Print 2 random numbers from 0 to 100 */
+    a = rand() % 100;
+    b = rand() % 100;
+    printf("\nPosisi kecoak adalah: ");
+    printf("(%d,", a);
+    printf("%d)", b);
+   
+    printf("\nJarak robot dengan kecoak");
+    printf("\nJarak horizontal : %d", a-x);
+    printf("\nJarak vertikal: %d", b-y);
 }
 
 int main()
@@ -43,6 +64,8 @@ int main()
 
     //Function call to calculate position
     findPos(&dir);
+    
+    
 
     return 0;
 }
