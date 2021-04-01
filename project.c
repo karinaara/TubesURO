@@ -5,6 +5,8 @@ void findPos(char *dir)
     int up = 0, down = 0;
     int left = 0, right = 0;
     int i;
+    int x;
+    int y;
 
     for (i = 0; dir[i] != '\0' ; i++) {
 
@@ -27,9 +29,11 @@ void findPos(char *dir)
     }
 
     //Final position of robot
+    x = right - left
+    y = up - down
     printf("Final Position of the Robot: (");
-    printf("%d", (right - left));
-    printf(",%d", (up - down));
+    printf("%d", (x));
+    printf(",%d", (y));
     printf(")");
 }
 
