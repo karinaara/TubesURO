@@ -147,6 +147,7 @@ int main(){
             ++count;
         }
    }    
+        Menu();
         scanf("%d", &choice);
         switch (choice)
         {
