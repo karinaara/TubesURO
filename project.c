@@ -76,17 +76,12 @@ void spawn()
 }           
     // The accuracy of robot firing
 void Fire(int h, int v){
-    int hit = 0;
-    int miss = 0;
 
-    if(vektor(h,v) <= pangkat(3,2)){
-    hit += 1;
+    while(vektor(h,v) <= pangkat(3,2)){
     kecoakhealth -= 5;
     }
-    else
-        miss += 1;
            
-    if(hit >= 20 & kecoakhealth <= 0|| robothealth> 0){
+    if(kecoakhealth == 0 && robothealth> 0){
         printf("Mission Complete\n");
     }
     else if (robothealth == 0){
@@ -180,3 +175,4 @@ int main(){
     InactivateRobot();
     return 0;
 }
+
