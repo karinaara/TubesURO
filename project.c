@@ -166,7 +166,7 @@ int main(){
         case 2:
             findPos(&dir);
             //Function call to take hit and miss of shooting programm
-            Fire(x,y);
+            Fire(x-a,y-b);
             break;
         case 3:
             InactivateRobot();
