@@ -164,7 +164,6 @@ int main(){
             findPos(&dir);
             break;
         case 2:
-            findPos(&dir);
             //Function call to take hit and miss of shooting programm
             Fire(x-a,y-b);
             break;
