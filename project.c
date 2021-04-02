@@ -164,6 +164,7 @@ int main(){
             break;
         case 3:
             InactivateRobot();
+            break;
         default:
         break;
         }
