@@ -146,13 +146,13 @@ int main(){
     char *dir;
     int choice;
     spawn();
-    while (robothealth > 0);
+    while (robothealth > 0){
         if (kecoakhealth <= 0){
             printf("Kecoak is dead\n");
             spawn();
             ++count;
         }
-        
+   }    
         scanf("%d", &choice);
         switch (choice)
         {
